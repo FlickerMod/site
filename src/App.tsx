@@ -14,7 +14,8 @@ const App: Component = () => {
       <div class="p-5">
         <p>content, code samples, etc goes here</p>
 
-        <Code>export default test</Code>
+        <Code>export default test{"\n"}
+        test</Code>
       </div>
     </>
   );

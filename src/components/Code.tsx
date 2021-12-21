@@ -1,9 +1,9 @@
 import Prism from "prismjs";
-import { createEffect } from "solid-js";
+import { createEffect, JSX } from "solid-js";
 
 interface CodeProps {
   lang?: string;
-  children: string;
+  children: JSX.Element;
 }
 
 function getRandom(): string {
