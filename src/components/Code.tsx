@@ -21,7 +21,11 @@ const Code = ({ lang, children }: CodeProps) => {
 
   return (
     <pre>
-      <code class={`language-${lang ?? "js"}`} id={`code-${uuid}`}>
+      <code
+        class={`language-${lang ?? "js"}`}
+        id={`code-${uuid}`}
+        style={{ "font-size": ".9rem" }}
+      >
         {children}
       </code>
     </pre>
