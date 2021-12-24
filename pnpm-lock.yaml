@@ -7,6 +7,7 @@ specifiers:
   typescript: ^4.5.4
   vite: ^2.7.3
   vite-plugin-solid: ^2.1.4
+  vite-plugin-string: ^1.1.1
   vite-plugin-windicss: ^1.5.4
   windicss: ^3.4.0
 
@@ -19,6 +20,7 @@ devDependencies:
   typescript: 4.5.4
   vite: 2.7.3
   vite-plugin-solid: 2.1.4
+  vite-plugin-string: 1.1.1
   vite-plugin-windicss: 1.5.4_vite@2.7.3
   windicss: 3.4.0
 
@@ -341,6 +343,14 @@ packages:
       fastq: 1.13.0
     dev: true
 
+  /@rollup/pluginutils/4.1.2:
+    resolution: {integrity: sha512-ROn4qvkxP9SyPeHaf7uQC/GPFY6L/OWy9+bd9AwcjOAWQwxRscoEyAUD8qCY5o5iL4jqQwoLk2kaTKJPb/HwzQ==}
+    engines: {node: '>= 8.0.0'}
+    dependencies:
+      estree-walker: 2.0.2
+      picomatch: 2.3.0
+    dev: true
+
   /@types/prismjs/1.16.6:
     resolution: {integrity: sha512-dTvnamRITNqNkqhlBd235kZl3KfVJQQoT5jkXeiWSBK7i4/TLKBNLV0S1wOt8gy4E2TY722KLtdmv2xc6+Wevg==}
     dev: true
@@ -631,6 +641,10 @@ packages:
   /escape-string-regexp/1.0.5:
     resolution: {integrity: sha1-G2HAViGQqN/2rjuyzwIAyhMLhtQ=}
     engines: {node: '>=0.8.0'}
+    dev: true
+
+  /estree-walker/2.0.2:
+    resolution: {integrity: sha512-Rfkk/Mp/DL7JVje3u18FxFujQlTNR2q6QfMSMB7AvCBx91NGj/ba3kCfza0f6dVDbw7YlRf/nDrn7pQrCCyQ/w==}
     dev: true
 
   /fast-glob/3.2.7:
@@ -937,6 +951,12 @@ packages:
       - sass
       - stylus
       - supports-color
+    dev: true
+
+  /vite-plugin-string/1.1.1:
+    resolution: {integrity: sha512-d4R8wkPbgMRcDwhsbnSAxZHRfsWBvB4wr0eFUHX2AoZrHnp49FSdbud3PzXidklmHPXkjFlbUkpM9oorvegIZg==}
+    dependencies:
+      '@rollup/pluginutils': 4.1.2
     dev: true
 
   /vite-plugin-windicss/1.5.4_vite@2.7.3:
