@@ -3,6 +3,8 @@ flicker
   .requires("flicker.webpack.webpackModules")
   .defines(() => {
     // this only runs after Discord is initialized, as webpackModules depends on dom.ready
-    // I have access to webpackModules now in this code!
-    // TODO: show example of how to actually use webpackModules in this context
+    // In this code, I can be sure that webpackModules is ready
+    const webpackModules = new flicker.classes.Webpack()
+    const Button = webpackModules.findByProps("Sizes", "Colors", "Looks", "DropdownSizes")
+    console.log(Button)
   });

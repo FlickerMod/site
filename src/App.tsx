@@ -7,8 +7,12 @@ import InlineCode from "./components/InlineCode";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 
+// @ts-expect-error
 import simpleSample from "./codeSamples/simple.txt";
+// @ts-expect-error
 import dependSample from "./codeSamples/depend.txt";
+// @ts-expect-error
+import extendSample from "./codeSamples/extend.txt";
 
 const App: Component = () => {
   return (
@@ -29,30 +33,15 @@ const App: Component = () => {
           the built-in <InlineCode>dom.ready</InlineCode> module to ensure
           Discord is initialized before starting to run your code.
         </CodeSection>
-        <CodeSection></CodeSection>
-        {/* =======
-        <p>Writing modules is easier than ever!</p>
-
-        <Code>{`flicker.module("myModule")
-  .defines(() => {
-    console.log("Hi!");
-  });`}</Code>
-
-        <p>Want another module's to be available before yours runs?</p>
-        <Code>{`flicker.module("myModule")
-  .requires("someOtherModule")
-  .defines(() => {
-    // someOtherModule's code is now available!
-  });`}</Code>
-
-        <p>Want to extend or customize Flicker?</p>
-        <Code>{`flicker.module("myModule")
-  .defines(() => {
-    flicker.Logger.inject({
-      // You can now change or add methods to the Logger class!
-    })
-  })`}</Code>
->>>>>>> f716c90cdd0102f8f2f60af389762e84e3e0199c */}
+        <CodeSection
+          code={extendSample}
+          header="Extend away, without janky patching"
+        >
+          Flicker allows you to extend it from within a module, as well as
+          extending other modules too, so you can export globals without having
+          to deal with attaching to window and cleaning up after yourself. And
+          it's all done through a simple API.
+        </CodeSection>
       </div>
     </>
   );

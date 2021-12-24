@@ -2,4 +2,4 @@ flicker
   .module("example.Hello")
   .defines(() => {
     console.log("Hello, World!")
-  })
+  });
