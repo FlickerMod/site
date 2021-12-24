@@ -41,6 +41,12 @@ const App: Component = () => {
           extending other modules too, so you can export globals without having
           to deal with attaching to window and cleaning up after yourself. And
           it's all done through a simple API.
+          <br /> {/* i know br is bad but im lazy */}
+          If you don't depend on <InlineCode>dom.ready</InlineCode>, then you
+          can setup your extensions and modifications before Discord is even
+          done initializing, to give you a head start and stop dependencies
+          having to wait around - though deps will wait for you if you take too
+          long, of course.
         </CodeSection>
       </div>
     </>

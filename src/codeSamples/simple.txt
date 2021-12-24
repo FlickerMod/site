@@ -1,5 +1,5 @@
 flicker
-  .module("example.Hello")
+  .module("example.hello")
   .defines(() => {
-    console.log("Hello, World!")
+    console.log("Hello, World!");
   });
