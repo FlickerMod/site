@@ -1,6 +1,0 @@
-flicker
-  .module("example.hello")
-  .requires("dom.ready")
-  .defines(() => {
-    console.log("Hello, World!");
-  });

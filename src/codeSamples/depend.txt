@@ -1,0 +1,8 @@
+flicker
+  .module("example.depend")
+  .requires("flicker.webpack.webpackModules")
+  .defines(() => {
+    // this only runs after Discord is initialized, as webpackModules depends on dom.ready
+    // I have access to webpackModules now in this code!
+    // TODO: show example of how to actually use webpackModules in this context
+  });

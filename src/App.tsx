@@ -2,13 +2,13 @@ import type { Component } from "solid-js";
 import { render } from "solid-js/web";
 
 import "virtual:windi.css";
-import Code from "./components/Code";
 import CodeSection from "./components/CodeSection";
+import InlineCode from "./components/InlineCode";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 
-import moduleSample from "./codeSamples/module.txt";
-import InlineCode from "./components/InlineCode";
+import simpleSample from "./codeSamples/simple.txt";
+import dependSample from "./codeSamples/depend.txt";
 
 const App: Component = () => {
   return (
@@ -16,14 +16,20 @@ const App: Component = () => {
       <Header />
       <Hero />
       <div class="p-5">
-        {/* <<<<<<< HEAD */}
-        <CodeSection code={moduleSample} header="Innovative module system">
-          Modules keep code neatly separated, and you can depend on other
-          modules to set a sensible load order, so modules can depend on other
-          modules' side effects. You can also depend on the built-in{" "}
-          <InlineCode>dom.ready</InlineCode> module to ensure Discord is
-          initialised before starting to run your code.
+        <CodeSection code={simpleSample} header="Innovative module system">
+          Modules keep code neatly separated, and helps code to stay independent
+          and clean, and with a super simple API, writing modules is super easy!
         </CodeSection>
+        <CodeSection
+          code={dependSample}
+          header="Dependencies without the hassle"
+        >
+          Modules can depend on others to help setup a sensible load order, so
+          you can depend on other modules' side effects. You can also depend on
+          the built-in <InlineCode>dom.ready</InlineCode> module to ensure
+          Discord is initialized before starting to run your code.
+        </CodeSection>
+        <CodeSection></CodeSection>
         {/* =======
         <p>Writing modules is easier than ever!</p>
 
